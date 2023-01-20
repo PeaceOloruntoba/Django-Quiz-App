@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Edge||Tech-Quiz App</title>
+        <style>
+            *{
+                background-color: #ff270f;
+            }
+            h1{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 70px;
+            }
+            h3{
+                text-align: center;
+                font-family: ;
+                font-weight: 700;
+            }
+            .header{
+                display: flex;
+                flex-direction: column;
+            }
+
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="header">
+            <img src="images/Edge-Tech.png" alt="">
+            <h1>Edge Tech</h1>
+        </div>
+        <h3>This little quiz is brought to you by all of us at edge tech</h3>
+        <nav class="nav nav-pills nav-fill">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+            <a class="nav-link" href="#">Much longer nav link</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link disabled">Disabled</a>
+        </nav>
+        <div class="container mt-5 pt-5">
+            <div class="col-md-6 mx-auto">
+                <form>
+                    <div class="form-group">
+                        <label>Select Category</label>
+                        <select name="category" id="" class="form-control">
+                            <option value="Choose">Choose</option>
+                            {% for category in categories %}
+                            <option value="{{category.category_name}}">{{category.category_name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <button class="btn btn-danger mt-3">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
